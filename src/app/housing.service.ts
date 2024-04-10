@@ -25,7 +25,7 @@ export class HousingService {
       state: 'CA',
       photo: `${this.baseUrl}/brandon-griggs-wR11KBaB86U-unsplash.jpg`,
       availableUnits: 5,
-      wifi: false,
+      wifi: true,
       laundry: true
     },
     {
