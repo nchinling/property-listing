@@ -29,3 +29,7 @@ jobs:
       - name: Run Angular tests
         run: ng test --watch=false
 
+      - name: Start Angular application
+        run: |
+          ng serve --port=4200 --host=0.0.0.0
+
