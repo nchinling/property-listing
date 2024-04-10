@@ -12,10 +12,11 @@ jobs:
         run: npm install
 
       - name: Run npm audit
-        run: npm audit --json > audit.json
-
+        run: npm audit
+      
       - name: Display audit results
-        run: cat audit.json
+        run: echo "Audit results displayed directly on console"
+
         
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
