@@ -24,7 +24,7 @@ export class HousingService {
       city: 'Santa Monica',
       state: 'CA',
       photo: `${this.baseUrl}/brandon-griggs-wR11KBaB86U-unsplash.jpg`,
-      availableUnits: 0,
+      availableUnits: 5,
       wifi: false,
       laundry: true
     },
