@@ -44,7 +44,7 @@ export class HousingService {
       city: 'Chicago',
       state: 'IL',
       photo: `${this.baseUrl}/ian-macdonald-W8z6aiwfi1E-unsplash.jpg`,
-      availableUnits: 1,
+      availableUnits: 2,
       wifi: true,
       laundry: false
     },
