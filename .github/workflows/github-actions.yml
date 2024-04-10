@@ -25,7 +25,3 @@ jobs:
 
       - name: Build Angular application
         run: ng build --configuration=production
-
-      - name: Start Angular application
-        run: |
-          ng serve --port=4200 --host=0.0.0.0
