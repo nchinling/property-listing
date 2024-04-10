@@ -14,7 +14,7 @@ export class HousingService {
       city: 'Chicago',
       state: 'IL',
       photo: `${this.baseUrl}/bernard-hermant-CLKGGwIBTaY-unsplash.jpg`,
-      availableUnits: 4,
+      availableUnits: 3,
       wifi: true,
       laundry: true
     },
