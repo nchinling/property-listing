@@ -18,7 +18,31 @@ A property listing site developed with Angular (WIP...)
 - There is only job: 'Explore Github Actions'
 - Runs on latest version of Ubuntu
 
-1) actions/checkout@v4 -> Clones the repository to the runner so that pipeline steps can be performed. 
-2) ls ${{ github.workspace }} -> list all files in the repository
-3) 
+```
+- name: Check out repository code
+        uses: actions/checkout@v4
+```
+1) Clones the repository to the runner so that steps in the pipeline can be executed. 
+
+```
+   run: ls ${{ github.workspace }}
+      
+```
+2) List all files in the repository.
+
+```
+    - name: Install Angular CLI and dependencies
+    run: |
+        npm install -g @angular/cli
+        npm install
+      
+```
+3) - Enables use of Angular's use of 'ng' command.
+   - Installs dependencies (files) listed in package.json
+
+
+
+
+
+
 
