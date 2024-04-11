@@ -32,8 +32,7 @@ jobs:
         run: |
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
-      # Additional steps
-      # Additional steps for Angular application
+
       - name: Install Angular CLI and dependencies
         run: |
           npm install -g @angular/cli

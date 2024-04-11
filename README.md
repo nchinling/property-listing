@@ -1,4 +1,11 @@
-# Propertylisting
+# Github Actions (CI/CD)
+Description: Creation of a Continuous Integration / Continuous Deployment pipeline with Github Actions
+
+## Web App 
+A property listing site developed with Angular (WIP...)
+
+![](src/assets/images/app.png)
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.3.
 
