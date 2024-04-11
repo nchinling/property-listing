@@ -83,11 +83,20 @@
               "src/favicon.ico",
               "src/assets"
             ],
+            
             "styles": [
               "src/styles.css"
             ],
             "scripts": []
+          },
+          "configurations": {
+            "ci": {
+              "watch": false,
+              "progress": false,
+              "browsers": "ChromeHeadlessCI"
+            }
           }
+        
         },
         "lint": {
           "builder": "@angular-eslint/builder:lint",

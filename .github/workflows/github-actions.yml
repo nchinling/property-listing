@@ -31,7 +31,7 @@ jobs:
       - name: Lint Angular application
         run: ng lint
 
-      - name: Run unit tests
+      - name: Test
         run: npm test -- --configuration=ci
 
       - name: Build Angular application
