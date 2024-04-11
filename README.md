@@ -1,34 +1,24 @@
 # Github Actions (CI/CD)
-Description: Creation of a Continuous Integration / Continuous Deployment pipeline with Github Actions
+Description: Setting up a Continuous Integration / Continuous Deployment pipeline with Github Actions
 
 ## Web App 
 A property listing site developed with Angular (WIP...)
 
 ![](src/assets/images/app.png)
 
+## Why CI/CD Pipeline?
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.3.
+- **Facilitates Continuous Integration and Deployment**: Streamlines the process of integrating code changes into the main codebase and deploying them to production. 
 
-## Development server
+- **Upholds Code Standards**: Enforces rigorous code standards such as testing, linting, security checks, and vulnerability scanning. This ensures code quality and integrity across the development pipeline compared to local development environments.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## Implementation
+- Workflow is triggered on 'push' to any branch. 
+- There is only job: 'Explore Github Actions'
+- Runs on latest version of Ubuntu
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+1) actions/checkout@v4 -> Clones the repository to the runner so that pipeline steps can be performed. 
+2) ls ${{ github.workspace }} -> list all files in the repository
+3) 
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
