@@ -2,7 +2,7 @@
 Description: Setting up a Continuous Integration / Continuous Deployment pipeline with Github Actions
 
 ## Web App 
-A property listing site developed with Angular (WIP...)
+A property listing site developed with Angular
 
 ![](src/assets/images/app.png)
 
@@ -26,11 +26,14 @@ A property listing site developed with Angular (WIP...)
 ```
 1) Clones the repository to the runner so that steps in the pipeline can be executed. 
 
+
+
 ```
    run: ls ${{ github.workspace }}
       
 ```
 2) List all files in the repository.
+
 
 ```
     - name: Install Angular CLI and dependencies
@@ -42,11 +45,13 @@ A property listing site developed with Angular (WIP...)
    - Installs dependencies (files) listed in package.json
 
 
+
 ```
      - name: Run npm audit
        run: npm audit || true
 ```
 4) - Identify vulnerabilities in the downloaded dependencies
+
 
 
 ```
@@ -56,11 +61,13 @@ A property listing site developed with Angular (WIP...)
 5) Analyse code for potential errors e.g. code style violations
 
 
+
 ```
       - name: Run unit tests
         run: ng test --watch=false || true
 ```
 6) Tests to ensure code work as intended
+
 
 
 ```
