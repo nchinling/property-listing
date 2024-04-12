@@ -53,7 +53,7 @@ jobs:
           push: true
           tags: gcr.io/devops-project-420111/property-app:v1
           build-args: |
-            HTTP_PORT=8080
+            HTTP_PORT=4200
 
       - name: Deploy to Cloud Run
         uses: google-github-actions/deploy-cloudrun@main
