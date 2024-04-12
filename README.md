@@ -37,8 +37,10 @@ A property listing site developed with Angular (WIP...)
         npm install
       
 ```
-3) - Enables use of Angular's use of 'ng' command.
+3) - Enables use of Angular's use of 'ng' command in pipeline.
    - Installs dependencies (files) listed in package.json
+
+
 
 
 
