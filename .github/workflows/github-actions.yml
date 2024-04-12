@@ -36,12 +36,6 @@ jobs:
       - name: Build Angular application
         run: ng build --configuration=production
   
-  deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
       - name: Set up Google Cloud SDK
         uses: google-github-actions/setup-gcloud@main
         with:
