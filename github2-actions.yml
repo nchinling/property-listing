@@ -40,24 +40,34 @@ jobs:
       - name: Build Angular application
         run: ng build --configuration=production
   
-     - name: Setup Cloud cli
-        uses: google-github-actions/setup-gcloud@v0.2.0
+      - name: Set up Google Cloud SDK
+        uses: google-github-actions/setup-gcloud@main
         with:
-          project_id: ${{ env.PROJECT_ID }}
+          project_id: devops-project-420111
           service_account_key: ${{ secrets.GCP_SA_KEY }}
           export_default_credentials: true
-        # Configure Docker with Credentials
-      - name: Authorize Docker push
+
+      - name: Configure docker for GCP
         run: gcloud auth configure-docker
 
-      - name: Build and Push Container
-        run: |-
-          docker build -t gcr.io/${{ env.PROJECT_ID }}/${{ env.SERVICE }}:${{  github.sha }} .
-          docker push gcr.io/${{ env.PROJECT_ID }}/${{ env.SERVICE }}:${{  github.sha }}
-      - name: Deploy to Cloud Run
-        id: gohibeesh
-        uses: google-github-actions/deploy-cloudrun@v0.4.0
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v2
         with:
-          service: ${{ env.SERVICE }}
-          image: gcr.io/${{ env.PROJECT_ID }}/${{ env.SERVICE }}:${{  github.sha }}
-          region: ${{ env.REGION }}
+          context: .
+          push: true
+          tags: gcr.io/devops-project-420111/property-app:v1
+          build-args: |
+            HTTP_PORT=4200
+
+      - name: Deploy to Cloud Run
+        uses: google-github-actions/deploy-cloudrun@main
+        with:
+          image: gcr.io/devops-project-420111/property-app:v1
+          service: property-app
+          region:  asia-southeast1
+          platform: managed
+          allow-unauthenticated: true
+          env_vars: |
+              FOO=bar
+              ZIP=zap
+        
