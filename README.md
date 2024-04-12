@@ -32,13 +32,23 @@ A property listing site developed with Angular (WIP...)
 
 ```
     - name: Install Angular CLI and dependencies
-    run: |
+      run: |
         npm install -g @angular/cli
         npm install
-      
 ```
 3) - Enables use of Angular's use of 'ng' command in pipeline.
    - Installs dependencies (files) listed in package.json
+
+
+```
+     - name: Run npm audit
+       run: npm audit || true
+```
+4) - Identify vulnerabilities in the downloaded dependencies
+
+
+
+
 
 
 
