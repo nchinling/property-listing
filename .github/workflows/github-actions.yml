@@ -55,8 +55,8 @@ jobs:
           project_id: ${{ env.PROJECT_ID }}
           service_account_key: ${{ secrets.GCP_SA_KEY }}
           export_default_credentials: true
-        # Configure Docker with Credentials
-      - name: Authorisee Docker push
+      
+      - name: Authorise Docker push
         run: gcloud auth configure-docker
 
       - name: Build and Push Container
