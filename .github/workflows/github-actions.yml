@@ -36,7 +36,7 @@ jobs:
       - name: Build Angular application
         run: ng build --configuration=production
   
-    deploy:
+  deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
