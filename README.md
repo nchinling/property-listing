@@ -15,9 +15,11 @@ A property listing site developed with Angular (WIP...)
 
 ## Implementation
 - Workflow is triggered on 'push' to any branch. 
-- There is only job: 'Explore Github Actions'
-- Runs on latest version of Ubuntu
+- There are 2 jobs: 'Build' and 'Deploy'
+- Runs on Ubuntu
 
+
+### Build
 ```
 - name: Check out repository code
         uses: actions/checkout@v4
@@ -47,10 +49,37 @@ A property listing site developed with Angular (WIP...)
 4) - Identify vulnerabilities in the downloaded dependencies
 
 
+```
+      - name: Lint Angular application
+        run: ng lint
+```
+5) Analyse code for potential errors e.g. code style violations
 
 
+```
+      - name: Run unit tests
+        run: ng test --watch=false || true
+```
+6) Tests to ensure code work as intended
 
 
+```
+      - name: Build Angular application
+        run: ng build --configuration=production
+```
+7) Ensures application can be successfully built
+
+![](src/assets/images/pipe.png)
+
+### Deploy
+
+![](src/assets/images/deploy.png)
+
+![](src/assets/images/deploy_codes.png)
+
+![](src/assets/images/success.png)
+
+[Site hosted on GCP](https://property-listing-ohf3s6ax5q-as.a.run.app/)
 
 
 
