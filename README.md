@@ -26,7 +26,7 @@ A property listing site developed with Angular
 ```
 1) Clones the repository to the runner so that steps in the pipeline can be executed. 
 
-<br/>
+<br/></br>
 
 ```
    run: ls ${{ github.workspace }}
@@ -34,7 +34,7 @@ A property listing site developed with Angular
 ```
 2) List all files in the repository.
 
-<br/>
+<br/></br>
 
 ```
     - name: Install Angular CLI and dependencies
@@ -45,7 +45,7 @@ A property listing site developed with Angular
 3) - Enables use of Angular's use of 'ng' command in pipeline.
    - Installs dependencies (files) listed in package.json
 
-<br/>
+<br/></br>
 
 ```
      - name: Run npm audit
@@ -53,7 +53,7 @@ A property listing site developed with Angular
 ```
 4) - Identify vulnerabilities in the downloaded dependencies
 
-<br/>
+<br/></br>
 
 ```
       - name: Lint Angular application
@@ -61,7 +61,7 @@ A property listing site developed with Angular
 ```
 5) Analyse code for potential errors e.g. code style violations
 
-<br/>
+<br/></br>
 
 ```
       - name: Run unit tests
@@ -69,14 +69,14 @@ A property listing site developed with Angular
 ```
 6) Tests to ensure code work as intended
 
-<br/>
+<br/></br>
 
 ```
       - name: Build Angular application
         run: ng build --configuration=production
 ```
 7) Ensures application can be successfully built
-<br/>
+<br/></br>
 
 ![](src/assets/images/pipe.png)
 
