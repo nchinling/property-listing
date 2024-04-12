@@ -41,12 +41,10 @@ jobs:
       - name: Build Angular application
         run: ng build --configuration=production
 
-  Deploy:
-    runs-on: ubuntu-latest
-    steps:
+
       - name: Checkout
         uses: actions/checkout@v2
-        
+
       - name: Setup Cloud cli
         uses: google-github-actions/setup-gcloud@v0.2.0
         with:
@@ -54,7 +52,7 @@ jobs:
           service_account_key: ${{ secrets.GCP_SA_KEY }}
           export_default_credentials: true
         # Configure Docker with Credentials
-      - name: Authorize Docker push
+      - name: Authorisee Docker push
         run: gcloud auth configure-docker
 
       - name: Build and Push Container
