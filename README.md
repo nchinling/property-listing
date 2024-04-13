@@ -88,7 +88,6 @@ A property listing site developed with Angular
 
 ![](src/assets/images/success.png)
 
-[Site hosted on GCP](https://property-listing-ohf3s6ax5q-as.a.run.app/)
 
 
 
