@@ -17,6 +17,7 @@ A property listing site developed with Angular
 - Workflow is triggered on 'push' to any branch. 
 - There are 2 jobs: 'Build' and 'Deploy'
 - Runs on Ubuntu
+- App is Dockerised and deployed to Google Cloud Run. 
 
 
 ### Build
